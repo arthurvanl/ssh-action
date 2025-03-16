@@ -17,6 +17,6 @@ inputs:
     description: 'The ssh commands'
     required: true
 runs:
-  using: docker
+  using: node20
   main: main.ts
 
