@@ -17,6 +17,6 @@ inputs:
     description: 'The ssh commands'
     required: true
 runs:
-  using: bun1
+  using: oven-sh/setup-bun@v2
   main: main.ts
 
