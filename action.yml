@@ -18,5 +18,5 @@ inputs:
     required: true
 runs:
   using: bun1
-  main: index.ts
+  main: main.ts
 
