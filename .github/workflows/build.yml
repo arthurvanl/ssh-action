@@ -1,18 +1,15 @@
-name: publish-action
-on: 
+name: Test action
+on:
   push:
-    branches:
-      - master
+    branches: [master]
 jobs:
-  publish-action:
-    permissions:
-      contents: write
+  test-action:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: jcbhmr/configure-bun-action@v1
       - uses: ./
-        with:
+        with: 
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
