@@ -1,0 +1,21 @@
+name: publish-action
+on: 
+  push:
+    branches:
+      - master
+jobs:
+  publish-action:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: jcbhmr/configure-bun-action@v1
+      - uses: ./
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          commands: |
+            "cd /var/www/html"
+            "git pull"

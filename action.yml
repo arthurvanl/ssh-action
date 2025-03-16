@@ -1,0 +1,22 @@
+name: 'Run SSH Commands'
+description: 'This action allows you to run ssh commands.'
+branding:
+  icon: 'chevron-right'
+  color: 'black'
+inputs: 
+  host: #input id
+    description: 'The vps hostname'
+    required: true
+  username: #input id
+    description: 'The vps ssh username'
+    required: true
+  password: #input id
+    description: 'THe vps ssh password'
+    required: true
+  commands: 
+    description: 'The ssh commands'
+    required: true
+runs:
+  using: bun1
+  main: index.ts
+
