@@ -17,6 +17,6 @@ inputs:
     description: 'The ssh commands'
     required: true
 runs:
-  using: oven-sh/setup-bun@v2
+  using: docker
   main: main.ts
 
